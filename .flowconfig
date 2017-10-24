@@ -1,0 +1,11 @@
+[ignore]
+.*/node_modules/editions/.*
+
+[include]
+
+[libs]
+
+[lints]
+
+[options]
+esproposal.export_star_as=enable

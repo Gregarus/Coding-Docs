@@ -1,0 +1,88 @@
+{
+  "name": "react-redux-reference",
+  "private": true,
+  "scripts": {
+    "prepare": "flow-typed install",
+    "test": "eslint --fix src spec && flow && mocha --require babel-register spec/**/*.spec.js",
+    "build": "webpack",
+    "start": "webpack-dev-server --port 8080 & json-server --port 8081 --watch db.json & wait"
+  },
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "flow-typed": "^2.1.5",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.2.3",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-flow": "^6.23.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "chai": "^4.1.2",
+    "chai-enzyme": "^0.8.0",
+    "enzyme": "^2.9.1",
+    "eslint": "^4.6.1",
+    "eslint-config-prettier": "^2.4.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-config-standard-jsx": "^4.0.2",
+    "eslint-plugin-flowtype": "^2.35.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.1.1",
+    "eslint-plugin-prettier": "^2.2.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-react": "^7.3.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "flow-bin": "^0.54.0",
+    "jsdom": "^11.2.0",
+    "json-server": "^0.12.0",
+    "mocha": "^3.5.0",
+    "prettier": "^1.6.1",
+    "react-test-renderer": "^15.6.1",
+    "reselect": "^3.0.1",
+    "sinon": "^3.2.1",
+    "sinon-chai": "^2.13.0",
+    "webpack": "^3.5.5",
+    "webpack-dev-server": "^2.7.1"
+  },
+  "babel": {
+    "presets": [
+      "env",
+      "stage-0",
+      "flow",
+      "react"
+    ]
+  },
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "plugins": [
+      "flowtype",
+      "prettier"
+    ],
+    "extends": [
+      "standard",
+      "standard-jsx",
+      "plugin:flowtype/recommended",
+      "prettier",
+      "prettier/flowtype",
+      "prettier/react"
+    ],
+    "env": {
+      "mocha": true
+    },
+    "rules": {
+      "prettier/prettier": [
+        "error",
+        {
+          "semi": false,
+          "singleQuote": true
+        }
+      ],
+      "no-unused-expressions": "off"
+    }
+  }
+}
